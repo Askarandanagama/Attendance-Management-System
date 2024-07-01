@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Attendance_Management_System_.PAL.User_Control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,40 +64,52 @@ namespace Attendance_Management_System_.PAL.Forms
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonDashboard);
-            userControlAddClass1.Visible = false;
-            userControlDashboard1.Count();
-            userControlDashboard1.Visible = true;
+            userControlAttendance1.Visible = false;
+            userControlAddClass2.Visible = false;
+            userControlAddStudent2.Visible = false;
+            userControlDashboard2.Count();
+            userControlDashboard2.Visible = true;
         }
 
 
         private void buttonAttendance_Click_1(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAttendance);
-            userControlAddClass1.Visible = false;
-            userControlDashboard1.Visible = false;
+            userControlAddClass2.Visible = false;
+            userControlAddStudent2.Visible = false;
+            userControlDashboard2.Visible = false;
+            userControlAttendance1.Visible = true;
         }
 
         private void buttonReport_Click(object sender, EventArgs e)
                 {
                     MoveSidePanel(buttonReport);
-                    userControlAddClass1.Visible = false;
-                    userControlDashboard1.Visible = false;
+                    userControlAttendance1.Visible = false;
+                    userControlAddClass2.Visible = false;
+                    userControlAddStudent2.Visible = false;
+                    userControlDashboard2.Visible = false;
                 }
 
         private void buttonAddclass_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAddclass);
-            userControlAddClass1.ClearTextBox();
-            userControlAddClass1.Visible = true;
-            userControlDashboard1.Visible = false;
+            userControlAddClass2.ClearTextBox();
+            userControlAddClass2.Visible = true;
+            userControlAttendance1.Visible = false;
+            userControlAddStudent2.Visible = false;
+            userControlDashboard2.Visible = false;
+            userControlAddStudent2.ClearTextBox();
+           
         }
 
 
         private void buttonAddStudent_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAddStudent);
-            userControlAddClass1.Visible = false;
-            userControlDashboard1.Visible = false;
+            userControlAddStudent2.Visible = true;
+            userControlAttendance1.Visible = false;
+            userControlAddClass2.Visible = false;
+            userControlDashboard2.Visible = false;
         }
 
         
@@ -105,8 +118,10 @@ namespace Attendance_Management_System_.PAL.Forms
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonRegister);
-            userControlAddClass1.Visible = false;
-            userControlDashboard1.Visible = false;
+            userControlAttendance1.Visible = false;
+            userControlAddClass2.Visible = false;
+            userControlAddStudent2.Visible = false;
+            userControlDashboard2.Visible = false;
         }
 
         private void pictureBoxExpand_Click(object sender, EventArgs e)
@@ -158,6 +173,16 @@ namespace Attendance_Management_System_.PAL.Forms
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControlDashboard2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelBack_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

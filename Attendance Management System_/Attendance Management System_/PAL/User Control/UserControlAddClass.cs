@@ -219,5 +219,10 @@ namespace Attendance_Management_System_.PAL.User_Control
         {
 
         }
+
+        private void textBoxMale_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

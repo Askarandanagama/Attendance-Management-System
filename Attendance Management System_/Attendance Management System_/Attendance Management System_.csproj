@@ -76,6 +76,18 @@
     <Compile Include="PAL\User Control\UserControlAddClass.Designer.cs">
       <DependentUpon>UserControlAddClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="PAL\User Control\UserControlAddStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlAddStudent.Designer.cs">
+      <DependentUpon>UserControlAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlAttendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlAttendance.Designer.cs">
+      <DependentUpon>UserControlAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="PAL\User Control\UserControlDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PAL\User Control\UserControlAddClass.resx">
       <DependentUpon>UserControlAddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\UserControlAddStudent.resx">
+      <DependentUpon>UserControlAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\UserControlAttendance.resx">
+      <DependentUpon>UserControlAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PAL\User Control\UserControlDashboard.resx">
       <DependentUpon>UserControlDashboard.cs</DependentUpon>

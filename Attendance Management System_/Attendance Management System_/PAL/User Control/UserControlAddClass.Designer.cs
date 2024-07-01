@@ -32,6 +32,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControlAddClass = new System.Windows.Forms.TabControl();
             this.tabPageAddClass = new System.Windows.Forms.TabPage();
+            this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxFemale = new System.Windows.Forms.TextBox();
@@ -51,17 +52,12 @@
             this.labelCountClass = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridViewClass = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
             this.tabPageUPClass = new System.Windows.Forms.TabPage();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
@@ -79,6 +75,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlAddClass.SuspendLayout();
             this.tabPageAddClass.SuspendLayout();
             this.tabPageSearchClass.SuspendLayout();
@@ -103,6 +104,7 @@
             // tabPageAddClass
             // 
             this.tabPageAddClass.BackColor = System.Drawing.Color.White;
+            this.tabPageAddClass.Controls.Add(this.dateTimePickerDate);
             this.tabPageAddClass.Controls.Add(this.buttonAdd);
             this.tabPageAddClass.Controls.Add(this.panel4);
             this.tabPageAddClass.Controls.Add(this.textBoxFemale);
@@ -127,6 +129,15 @@
             this.tabPageAddClass.Enter += new System.EventHandler(this.tabPageAddClass_Enter);
             this.tabPageAddClass.Leave += new System.EventHandler(this.tabPageAddClass_Leave);
             // 
+            // dateTimePickerDate
+            // 
+            this.dateTimePickerDate.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDate.Location = new System.Drawing.Point(115, 257);
+            this.dateTimePickerDate.Name = "dateTimePickerDate";
+            this.dateTimePickerDate.Size = new System.Drawing.Size(270, 26);
+            this.dateTimePickerDate.TabIndex = 2;
+            // 
             // buttonAdd
             // 
             this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -135,7 +146,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(115, 291);
+            this.buttonAdd.Location = new System.Drawing.Point(115, 289);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(114, 37);
             this.buttonAdd.TabIndex = 0;
@@ -147,7 +158,7 @@
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.LightGray;
-            this.panel4.Location = new System.Drawing.Point(558, 246);
+            this.panel4.Location = new System.Drawing.Point(558, 244);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(270, 2);
             this.panel4.TabIndex = 0;
@@ -157,7 +168,7 @@
             this.textBoxFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFemale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFemale.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBoxFemale.Location = new System.Drawing.Point(557, 219);
+            this.textBoxFemale.Location = new System.Drawing.Point(557, 217);
             this.textBoxFemale.Name = "textBoxFemale";
             this.textBoxFemale.Size = new System.Drawing.Size(270, 21);
             this.textBoxFemale.TabIndex = 0;
@@ -168,17 +179,17 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(554, 190);
+            this.label5.Location = new System.Drawing.Point(554, 188);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 19);
+            this.label5.Size = new System.Drawing.Size(112, 19);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Time";
+            this.label5.Text = "Total classes";
             // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Location = new System.Drawing.Point(116, 246);
+            this.panel3.Location = new System.Drawing.Point(116, 244);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(270, 2);
             this.panel3.TabIndex = 1;
@@ -188,10 +199,11 @@
             this.textBoxMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxMale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxMale.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBoxMale.Location = new System.Drawing.Point(115, 219);
+            this.textBoxMale.Location = new System.Drawing.Point(115, 217);
             this.textBoxMale.Name = "textBoxMale";
             this.textBoxMale.Size = new System.Drawing.Size(270, 21);
             this.textBoxMale.TabIndex = 0;
+            this.textBoxMale.TextChanged += new System.EventHandler(this.textBoxMale_TextChanged);
             this.textBoxMale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMale_KeyPress);
             // 
             // label4
@@ -199,17 +211,17 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(112, 190);
+            this.label4.Location = new System.Drawing.Point(112, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 19);
+            this.label4.Size = new System.Drawing.Size(40, 19);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Date";
+            this.label4.Text = "Hall";
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Location = new System.Drawing.Point(557, 175);
+            this.panel2.Location = new System.Drawing.Point(557, 173);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(270, 2);
             this.panel2.TabIndex = 0;
@@ -219,7 +231,7 @@
             this.textBoxNoStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxNoStudents.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNoStudents.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBoxNoStudents.Location = new System.Drawing.Point(557, 151);
+            this.textBoxNoStudents.Location = new System.Drawing.Point(557, 149);
             this.textBoxNoStudents.Name = "textBoxNoStudents";
             this.textBoxNoStudents.Size = new System.Drawing.Size(270, 21);
             this.textBoxNoStudents.TabIndex = 0;
@@ -230,7 +242,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(553, 122);
+            this.label3.Location = new System.Drawing.Point(553, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 19);
             this.label3.TabIndex = 0;
@@ -241,7 +253,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Location = new System.Drawing.Point(115, 175);
+            this.panel1.Location = new System.Drawing.Point(115, 173);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 2);
             this.panel1.TabIndex = 0;
@@ -251,7 +263,7 @@
             this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxName.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBoxName.Location = new System.Drawing.Point(115, 151);
+            this.textBoxName.Location = new System.Drawing.Point(115, 149);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(270, 21);
             this.textBoxName.TabIndex = 0;
@@ -261,7 +273,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(102, 122);
+            this.label7.Location = new System.Drawing.Point(102, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 19);
             this.label7.TabIndex = 0;
@@ -273,7 +285,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(112, 122);
+            this.label2.Location = new System.Drawing.Point(112, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 0;
@@ -298,11 +310,11 @@
             this.tabPageSearchClass.Controls.Add(this.label10);
             this.tabPageSearchClass.Controls.Add(this.dataGridViewClass);
             this.tabPageSearchClass.Controls.Add(this.dateTimePicker1);
-            this.tabPageSearchClass.Controls.Add(this.pictureBoxSearch);
             this.tabPageSearchClass.Controls.Add(this.panel5);
             this.tabPageSearchClass.Controls.Add(this.label9);
             this.tabPageSearchClass.Controls.Add(this.label8);
             this.tabPageSearchClass.Controls.Add(this.textBoxSearch);
+            this.tabPageSearchClass.Controls.Add(this.pictureBoxSearch);
             this.tabPageSearchClass.Location = new System.Drawing.Point(4, 4);
             this.tabPageSearchClass.Name = "tabPageSearchClass";
             this.tabPageSearchClass.Padding = new System.Windows.Forms.Padding(3);
@@ -366,63 +378,12 @@
             this.dataGridViewClass.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClass_CellClick);
             this.dataGridViewClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Class_ID";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Class_Name";
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Class_Total";
-            this.Column3.HeaderText = "Number of Students";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Class_Male";
-            this.Column4.HeaderText = "Date";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Class_Female";
-            this.Column5.HeaderText = "Time";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(417, 345);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 0;
-            // 
-            // pictureBoxSearch
-            // 
-            this.pictureBoxSearch.Image = global::Attendance_Management_System_.Properties.Resources.icons8_search_50;
-            this.pictureBoxSearch.Location = new System.Drawing.Point(405, 74);
-            this.pictureBoxSearch.Name = "pictureBoxSearch";
-            this.pictureBoxSearch.Size = new System.Drawing.Size(19, 26);
-            this.pictureBoxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxSearch.TabIndex = 5;
-            this.pictureBoxSearch.TabStop = false;
-            this.pictureBoxSearch.MouseHover += new System.EventHandler(this.pictureBoxSearch_MouseHover);
             // 
             // panel5
             // 
@@ -464,6 +425,17 @@
             this.textBoxSearch.Size = new System.Drawing.Size(252, 21);
             this.textBoxSearch.TabIndex = 0;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // pictureBoxSearch
+            // 
+            this.pictureBoxSearch.Image = global::Attendance_Management_System_.Properties.Resources.icons8_search_50;
+            this.pictureBoxSearch.Location = new System.Drawing.Point(405, 74);
+            this.pictureBoxSearch.Name = "pictureBoxSearch";
+            this.pictureBoxSearch.Size = new System.Drawing.Size(19, 26);
+            this.pictureBoxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSearch.TabIndex = 5;
+            this.pictureBoxSearch.TabStop = false;
+            this.pictureBoxSearch.MouseHover += new System.EventHandler(this.pictureBoxSearch_MouseHover);
             // 
             // tabPageUPClass
             // 
@@ -551,9 +523,9 @@
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(561, 199);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 19);
+            this.label12.Size = new System.Drawing.Size(112, 19);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Time";
+            this.label12.Text = "Total classes";
             // 
             // panel7
             // 
@@ -582,9 +554,9 @@
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label13.Location = new System.Drawing.Point(119, 199);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 19);
+            this.label13.Size = new System.Drawing.Size(40, 19);
             this.label13.TabIndex = 0;
-            this.label13.Text = "Date";
+            this.label13.Text = "Hall";
             // 
             // panel8
             // 
@@ -671,6 +643,46 @@
             this.label18.TabIndex = 16;
             this.label18.Text = "Add Class:";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Class_ID";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Class_Name";
+            this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Class_Total";
+            this.Column3.HeaderText = "Number of Students";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Class_Male";
+            this.Column4.HeaderText = "Hall";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Class_Female";
+            this.Column5.HeaderText = "Total classes";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // UserControlAddClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -741,6 +753,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
